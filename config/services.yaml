@@ -1,0 +1,37 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  ErdmannFreunde\ContaoLicenseBundle\License\ProductRegistry:
+    arguments:
+      $products: [] # wird vom RegisterProductsPass gefüllt
+    public: true
+
+  ErdmannFreunde\ContaoLicenseBundle\License\LicenseClient:
+    arguments:
+      $httpClient: '@http_client'
+      $logger: '@?logger'
+
+  ErdmannFreunde\ContaoLicenseBundle\License\LicenseManager:
+    arguments:
+      $connection: '@database_connection'
+      $cache: '@cache.app'
+    public: true
+
+  ErdmannFreunde\ContaoLicenseBundle\Command\LicenseCheckCommand:
+    tags: ['console.command']
+
+  erdmannfreunde.license.dca.tl_license_options:
+    class: ErdmannFreunde\ContaoLicenseBundle\EventListener\ProductOptionsListener
+    public: true
+
+  erdmannfreunde.license.dca.tl_license_submit:
+    class: ErdmannFreunde\ContaoLicenseBundle\EventListener\LicenseDcaListener
+    public: true
+
+  ErdmannFreunde\ContaoLicenseBundle\EventListener\LicenseCheckListener:
+    tags:
+      - { name: kernel.event_listener, event: kernel.controller }
+

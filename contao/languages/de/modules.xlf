@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+  <file datatype="plaintext" original="contao/languages/en/modules.xlf" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="MOD.license.0">
+        <source>Licenses</source>
+        <target>Lizenzen</target>
+      </trans-unit>
+      <trans-unit id="MOD.license.1">
+        <source>Manage license keys for commercial extensions.</source>
+        <target>Lizenzschlüssel für kommerzielle Erweiterungen verwalten.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

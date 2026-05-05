@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+  <file datatype="plaintext" original="contao/languages/en/tl_license.xlf" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_license.license_legend">
+        <source>License</source>
+        <target>Lizenz</target>
+      </trans-unit>
+      <trans-unit id="tl_license.status_legend">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="tl_license.product.0">
+        <source>Product</source>
+        <target>Produkt</target>
+      </trans-unit>
+      <trans-unit id="tl_license.product.1">
+        <source>Pick the commercial bundle this license key applies to.</source>
+        <target>Wähle das kommerzielle Bundle, für das dieser Lizenzschlüssel gilt.</target>
+      </trans-unit>
+      <trans-unit id="tl_license.license_key.0">
+        <source>License key</source>
+        <target>Lizenzschlüssel</target>
+      </trans-unit>
+      <trans-unit id="tl_license.license_key.1">
+        <source>The license key you received via email.</source>
+        <target>Der Lizenzschlüssel, den du per E-Mail erhalten hast.</target>
+      </trans-unit>
+      <trans-unit id="tl_license.status.0">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="tl_license.status.1">
+        <source>Last status reported by the license server.</source>
+        <target>Letzter vom Lizenzserver gemeldeter Status.</target>
+      </trans-unit>
+      <trans-unit id="tl_license.valid_until.0">
+        <source>Valid until</source>
+        <target>Gültig bis</target>
+      </trans-unit>
+      <trans-unit id="tl_license.valid_until.1">
+        <source>Date until which the license is valid (for trial / time-limited licenses).</source>
+        <target>Datum, bis zu dem die Lizenz gültig ist (bei Trial / zeitlich begrenzten Lizenzen).</target>
+      </trans-unit>
+      <trans-unit id="tl_license.last_checked.0">
+        <source>Last check</source>
+        <target>Letzte Prüfung</target>
+      </trans-unit>
+      <trans-unit id="tl_license.last_checked.1">
+        <source>Time of the last server check.</source>
+        <target>Zeitpunkt der letzten Server-Prüfung.</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.unknown">
+        <source>Unknown</source>
+        <target>Unbekannt</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.valid">
+        <source>Valid</source>
+        <target>Gültig</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.trial">
+        <source>Trial</source>
+        <target>Testversion</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.invalid">
+        <source>Invalid</source>
+        <target>Ungültig</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.major_mismatch">
+        <source>Major version mismatch</source>
+        <target>Major-Version passt nicht</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.revoked">
+        <source>Revoked</source>
+        <target>Widerrufen</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.no_key">
+        <source>No license key set</source>
+        <target>Kein Lizenzschlüssel hinterlegt</target>
+      </trans-unit>
+      <trans-unit id="tl_license.states.offline_grace">
+        <source>Server unreachable (grace period active)</source>
+        <target>Server nicht erreichbar (Karenzzeit aktiv)</target>
+      </trans-unit>
+      <trans-unit id="tl_license.statusMessage">
+        <source>License status: %s</source>
+        <target>Lizenzstatus: %s</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

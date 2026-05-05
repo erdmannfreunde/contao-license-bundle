@@ -1,0 +1,45 @@
+{
+    "name": "erdmannfreunde/contao-license-bundle",
+    "description": "Zentrales Lizenz-Bundle für kommerzielle Contao-Erweiterungen von Erdmann & Freunde. Verwaltet Lizenzkeys, prüft Major-Version-Bindung und steuert Pro-Features.",
+    "keywords": ["contao", "license", "commercial", "trial"],
+    "type": "contao-bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Erdmann & Freunde",
+            "homepage": "https://erdmann-freunde.de"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13 || ^5.3",
+        "symfony/config": "^5.4 || ^6.4 || ^7.0",
+        "symfony/dependency-injection": "^5.4 || ^6.4 || ^7.0",
+        "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0",
+        "symfony/http-client": "^5.4 || ^6.4 || ^7.0",
+        "symfony/cache": "^5.4 || ^6.4 || ^7.0",
+        "symfony/console": "^5.4 || ^6.4 || ^7.0",
+        "doctrine/dbal": "^3.0 || ^4.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ErdmannFreunde\\ContaoLicenseBundle\\": "src/"
+        },
+        "classmap": ["contao/"],
+        "exclude-from-classmap": [
+            "contao/config/",
+            "contao/dca/",
+            "contao/languages/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "ErdmannFreunde\\ContaoLicenseBundle\\ContaoManager\\Plugin"
+    }
+}
