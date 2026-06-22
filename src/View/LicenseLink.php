@@ -22,10 +22,20 @@ final class LicenseLink
         $url = $this->router->generate('contao_backend', ['do' => 'license']);
 
         return sprintf(
-            '<a href="%s" class="%s" title="Lizenzen verwalten">%s</a>',
+            '<a href="%s" class="%s" title="Lizenzen verwalten">%s%s</a>',
             htmlspecialchars($url),
             htmlspecialchars($class),
+            $this->icon(),
             htmlspecialchars($label),
         );
+    }
+
+    private function icon(): string
+    {
+        $base = '/system/themes/flexible/icons/';
+        $attr = 'width="16" height="16" alt="" style="vertical-align:middle;margin-right:4px" loading="lazy"';
+
+        return sprintf('<img src="%spasskey--dark.svg" class="color-scheme--dark" %s>', $base, $attr)
+            .sprintf('<img src="%spasskey.svg" class="color-scheme--light" %s>', $base, $attr);
     }
 }
