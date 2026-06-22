@@ -35,3 +35,12 @@ services:
     tags:
       - { name: kernel.event_listener, event: kernel.controller }
 
+  ErdmannFreunde\ContaoLicenseBundle\View\LicenseLink:
+    public: true
+
+  ErdmannFreunde\ContaoLicenseBundle\Controller\LicenseRedirectController:
+    arguments:
+      $connection: '@database_connection'
+    tags:
+      - controller.service_arguments
+
