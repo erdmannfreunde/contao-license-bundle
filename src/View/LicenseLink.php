@@ -8,8 +8,8 @@ use Symfony\Component\Routing\RouterInterface;
 
 /**
  * Rendert den "Lizenz"-Link, über den eine Erweiterung kontextuell auf die
- * Lizenzverwaltung ihres Produkts verlinkt. Ziel ist die Weiche
- * LicenseRedirectController, die den Datensatz bei Bedarf anlegt.
+ * Lizenz-Übersicht (do=license) verlinkt. Das Modul ist aus der Navigation
+ * ausgeblendet, bleibt aber über diesen Link erreichbar.
  */
 final class LicenseLink
 {
@@ -17,16 +17,13 @@ final class LicenseLink
     {
     }
 
-    public function url(string $productKey): string
+    public function render(string $class = '', string $label = 'Lizenz'): string
     {
-        return $this->router->generate('erdmannfreunde_license_open', ['product' => $productKey]);
-    }
+        $url = $this->router->generate('contao_backend', ['do' => 'license']);
 
-    public function render(string $productKey, string $class = '', string $label = 'Lizenz'): string
-    {
         return sprintf(
-            '<a href="%s" class="%s" title="Lizenzschlüssel verwalten">%s</a>',
-            htmlspecialchars($this->url($productKey)),
+            '<a href="%s" class="%s" title="Lizenzen verwalten">%s</a>',
+            htmlspecialchars($url),
             htmlspecialchars($class),
             htmlspecialchars($label),
         );
